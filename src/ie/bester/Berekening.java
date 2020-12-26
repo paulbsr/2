@@ -1,5 +1,7 @@
 package ie.bester;
 
+import static ie.bester.Nommers.repayments;
+
 public class Berekening {
 
     private static int hoofBedrag_P = 268000;
@@ -9,15 +11,15 @@ public class Berekening {
     private static final byte persentasie = 100;
     private static float maandelikseRenteKoers_R = (float) (jaarlikseRenteKoers_R / persentasie / maandeInJaar);
     private static float verbandTerugBetalings = termyn_N * maandeInJaar;
-    private public static double mortgage = hoofBedrag_P * (maandelikseRenteKoers_R * Math.pow(1 + maandelikseRenteKoers_R, verbandTerugBetalings))
+    private static double mortgage = hoofBedrag_P * (maandelikseRenteKoers_R * Math.pow(1 + maandelikseRenteKoers_R, verbandTerugBetalings))
             / (Math.pow(1 + maandelikseRenteKoers_R, verbandTerugBetalings) - 1);
 
 
-    // public static double printNumberOfEmployees() {System.out.println(mortgage);}
-    // public double getMortgage() {return mortgage;}
-    public static void metodeRekenaar() {System.out.println("Drolkop het te veel geleen!!!!!!!!!!: " + mortgage);}
+    public static double getMortgage() {return mortgage;}
+    public static double getHoofBedrag() {return hoofBedrag_P;}
 
+    public static void opsomming() {System.out.println("Drolkop het " + Nommers.prinsipaal + " geleen oor " + termyn_N +" jaar teen " + jaarlikseRenteKoers_R +"%APR.");}
+    public static void metodeRekenaar() {System.out.println("Drolkop het te veel geleen.........." + Nommers.repayments);}
 
-
-    }
+}
 
