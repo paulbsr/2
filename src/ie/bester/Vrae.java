@@ -6,14 +6,7 @@ public class Vrae {
 
     // FOR ENCAPSULATION DECLARE ALL VARIABLES AS PRIVATE SO THAT THEY ARE NOT ACCESSIBLE
 
-
-
-    //METODES
-
-    private static Scanner insette = new Scanner(System.in); //EK VESTAAN DIT, maar hoekom "private" en "static" ??
-
-
-
+    private static Scanner insette = new Scanner(System.in);
     public static double leesInsette (String prompt, double min, double max) {  //METHOD NAMED "Console.readNumber" WITH PARAMETERS FOR PROMPT/MIN/MAX
         double value; //DECLARE A VARIABLE CALLED "VALUE"
         while (true) { // DO WHILE THE FOLLOWING IS TRUE:
@@ -26,6 +19,5 @@ public class Vrae {
         return value;
     }
 
-    // public static void leesInsette() {
-    }
+}
 
