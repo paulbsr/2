@@ -3,6 +3,8 @@ package ie.bester;
 import java.text.NumberFormat;
 
 public class Nommers {
+
+// FOR ENCAPSULATION DECLARE ALL VARIABLES AS PRIVATE SO THAT THEY ARE NOT ACCESSIBLE
     private static double M = Berekening.getMortgage();
     private static double H = Berekening.getHoofBedrag();
 

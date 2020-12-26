@@ -4,6 +4,8 @@ import static ie.bester.Nommers.repayments;
 
 public class Berekening {
 
+// FOR ENCAPSULATION DECLARE ALL VARIABLES AS PRIVATE SO THAT THEY ARE NOT ACCESSIBLE
+
     private static int hoofBedrag_P = 268000;
     private static double jaarlikseRenteKoers_R = 3.6;
     private static byte termyn_N = 30;
@@ -14,11 +16,13 @@ public class Berekening {
     private static double mortgage = hoofBedrag_P * (maandelikseRenteKoers_R * Math.pow(1 + maandelikseRenteKoers_R, verbandTerugBetalings))
             / (Math.pow(1 + maandelikseRenteKoers_R, verbandTerugBetalings) - 1);
 
-
+// FOR ENCAPSULATION DECLARE ALL METHODS AS PUBLIC
+// FOR ENCAPSULATION USE GETTER & SETTER METHODS
+    
     public static double getMortgage() {return mortgage;}
     public static double getHoofBedrag() {return hoofBedrag_P;}
 
-    public static void opsomming() {System.out.println("Drolkop het " + Nommers.prinsipaal + " geleen oor " + termyn_N +" jaar teen " + jaarlikseRenteKoers_R +"%APR.");}
+    public static void opsomming() {System.out.println("Drolkop het " + Nommers.prinsipaal + " geleen oor " + termyn_N +" jaar teen " + jaarlikseRenteKoers_R +"% APR.");}
     public static void metodeRekenaar() {System.out.println("Drolkop het te veel geleen.........." + Nommers.repayments);}
 
 }
